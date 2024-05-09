@@ -1,7 +1,25 @@
-let nota1 = parseInt(prompt ("Digite uma: "));
+let número = prompt ("Dias da semana");
 
-let nota2 = parseInt(prompt("Digite outra nota: "));
+let semana = alert;
 
-let media = (nota1+nota2) /2
-
-console.log (média)
+if (número == "1"){
+   alert ("segunda-feira")
+}
+if (número == "2"){
+   alert ("terça-feira")
+}
+if (número == "3"){
+   alert ("quarta-feira")
+}
+if (número == "4"){
+   alert ("quinta-feira")
+}
+if (número == "5"){
+   alert ("sexta-feira")
+}
+if (número == "6"){
+   alert ("sabado")
+}
+if (número == "7"){
+   alert ("domingo")
+}
