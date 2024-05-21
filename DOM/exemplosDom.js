@@ -60,10 +60,34 @@
 
 function alterarTexto() {
     var paragrafo = document.getElementById("meuParagrafo");
-    paragrafo.textContent = "O texto foi alterado!";
+    paragrafo.textContent = "Texto alterado!";
 }
 
 // Adicionando um evento de clique ao botão
 document.getElementById("meuBotao").addEventListener("click", alterarTexto);
 
 
+function adicionarItem() {
+    var input = document.getElementById("itemInput");
+    var itemValue = input.value;
+    
+    if (itemValue.trim() === "") {
+        alert("Insira um item.");
+        return;
+    }
+    
+    var lista = document.getElementById("listaItens");
+    var novoItem = document.createElement("li");
+    novoItem.textContent = itemValue;
+    
+    var botaoremover = document.createElement("button");
+    botaoremover.textContent = "Remover";
+    botaoremover.onclick = function() {
+        lista.removeChild(novoItem);
+    };
+    
+    novoItem.appendChild(botaoremover);
+    lista.appendChild(novoItem);
+    
+    input.value = ""; // Limpa o campo de entrada após adicionar o item
+}

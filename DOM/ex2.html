@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio 2</title>
+</head>
+<body>
+    <h2>Lista de Itens</h2>
+
+    <input type="text" id="itemInput" placeholder="Novo item">
+    <button onclick="adicionarItem()">Adicionar Item</button>
+    
+    <ul id="listaItens">
+        <!-- Itens serão adicionados aqui -->
+    </ul>
+    <script>
+        function adicionarItem() {
+    var input = document.getElementById("itemInput");
+    var itemValue = input.value;
+    
+    if (itemValue.trim() === "") {
+        alert("Insira um item.");
+        return;
+    }
+    
+    var lista = document.getElementById("listaItens");
+    var novoItem = document.createElement("li");
+    novoItem.textContent = itemValue;
+    
+    var botaoremover = document.createElement("button");
+    botaoremover.textContent = "Remover";
+    botaoremover.onclick = function() {
+        lista.removeChild(novoItem);
+    };
+    
+    novoItem.appendChild(botaoremover);
+    lista.appendChild(novoItem);
+    
+    input.value = ""; // Limpa o campo de entrada após adicionar o item
+}
+
+    </script>
+</body>
+</html>

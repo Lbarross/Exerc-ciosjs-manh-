@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio 1</title>
+</head>
+<body>
+   
+
+    <p id="meuParagrafo">Clique no botão para alterar o texto.</p>
+
+    <button id="meuBotao">Alterar Texto</button>
+
+    
+    <script> // Função para alterar o texto do parágrafo
+
+        function alterarTexto() {
+            var paragrafo = document.getElementById("meuParagrafo");
+            paragrafo.textContent = "Texto alterado!";
+        }
+        
+        // Adicionando um evento de clique ao botão
+        document.getElementById("meuBotao").addEventListener("click", alterarTexto);</script>
+</body>
+</html>
